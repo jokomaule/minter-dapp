@@ -1,19 +1,19 @@
 /* FONTS */
 
-@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;500&display=swap');
 
 /* GLOBAL STYLES */
 
 :root {
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "Arvo", serif;
-  --font-code: "Roboto", monospace;
-  --bg-color: #00163f;
-  --bg-color-transparent: #00163f80;
-  --font-color: #ffffff;
-  --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
-  --header-shadow: var(--accent-color) 0px 0px 5px;
+  --font-primary: "Josefin Sans", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --font-code: "Montserrat", sans-serif;
+  --bg-color: #ffffff;
+  --bg-color-transparent: #ffffff00;
+  --font-color: rgb(0, 0, 0);
+  --btn-bg-color: #ae30bf;
+  --accent-color: yellow;
+  --header-shadow: var(--btn-bg-color) 0px 0px 0px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
 
@@ -24,12 +24,14 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: #ffffff;
+  background-position: center bottom;
   display: flex;
   flex-flow: column;
   height: 100vh;
   color: var(--font-color);
   font-family: var(--font-primary);
+  vertical-align: middle;
 }
 
 .container {
@@ -45,14 +47,14 @@ body {
 /* HEADER */
 
 header {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-transparent);
   box-shadow: var(--header-shadow);
 }
 
 header .container {
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 .menu {
@@ -65,11 +67,16 @@ header .container {
 .not-connected {
   align-items: center;
   height: 100%;
-  text-align: center;
-  margin: 0 auto 0 35vw;
+  text-align: left;
+  margin-top: 10vh !important;
+  margin-bottom: 10vh !important;
   opacity: 0;
   transform: translateY(10vh);
   transition: all 0.5s ease-in-out;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .show-not-connected {
@@ -78,10 +85,10 @@ header .container {
 }
 
 .not-connected h1 {
-  text-shadow: 2px 2px 0 var(--accent-color);
-  font-style: italic;
+  text-shadow: 0px 0px 0 var(--accent-color);
+  font-style: bold;
   margin: 2rem 0;
-  font-size: 3.5rem;
+  font-size: 5.5rem;
 }
 
 .not-connected p {
@@ -103,9 +110,9 @@ header .container {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--btn-bg-color);
-  color: var(--accent-color);
+  color: var(--bg-color);
   font-family: var(--font-secondary);
-  font-style: italic;
+  font-style: regular;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
@@ -141,8 +148,8 @@ header .container {
 .card {
   position: relative;
   background-color: var(--bg-color);
-  border-radius: 5px;
-  border: 3px solid var(--accent-color);
+  border-radius: 15px;
+  border: 2px solid var(--accent-color);
   box-shadow: var(--card-shadow);
   padding: 5rem;
   margin-bottom: 2rem;
@@ -184,8 +191,8 @@ section {
   height: auto;
 }
 .countdown .clock-item .count-number {
-  background: var(--accent-color);
-  color: var(--font-color);
+  background: var(--font-color);
+  color: var(--bg-color);
   font-size: 2rem;
   font-weight: 700;
   font-family: var(--font-secondary);
@@ -194,13 +201,13 @@ section {
   width: 100%;
   text-align: center;
   line-height: 1;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 4px 4px;
 }
 .countdown .clock-item .count-text {
-  background: var(--btn-bg-color);
+  background: var(--bg-color);
   font-family: var(--font-secondary);
   font-size: 1.1rem;
-  color: var(--bg-color);
+  color: var(--font-color);
   padding: 0.5rem 0.7rem;
   display: inline-block;
   width: 100%;
@@ -210,8 +217,8 @@ section {
 }
 
 .countdown h1 {
-  text-shadow: 2px 2px 0 var(--accent-color);
-  font-style: italic;
+  text-shadow: 0px 0px 0 var(--accent-color);
+  font-style: bold;
   margin: 2rem 0;
   font-size: 3.5rem;
   text-align: center;
@@ -324,8 +331,8 @@ section {
 }
 
 .splide__slide {
-  border: var(--accent-color) solid;
-  border-width: 5px 10px;
+  border: var(--bg-color-transparent) solid;
+  border-width: 2px 2px;
 }
 
 .splide__slide img {
@@ -343,6 +350,10 @@ section {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+  .splide {
+    display: none;
+  }
+  
   .menu {
     gap: 1rem;
   }
@@ -356,6 +367,7 @@ section {
     border-radius: 5px;
     padding: 2rem;
     margin: 0 auto;
+    vertical-align: middle;
   }
   .countdown ul {
     display: grid;
@@ -386,6 +398,12 @@ section {
   .mint-qty .btn {
     padding: 1rem;
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .splide {
+    display: none;
   }
 }
 
