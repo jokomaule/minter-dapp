@@ -7,7 +7,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Random Rabbits";
+const namePrefix = "TheRandomRabbits";
 const description = "We turn digital holders into real world investors. We buy cocoa and coffee plantations and guarantee the farmers a fixed, fair salary. 50% of the profits from the sale of the harvest go to the owners of The Random Rabbits and the farmers, the other 50% we invest in new plantations to increase the value of each Rabbit.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
@@ -45,16 +45,16 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 2; // Your API key rate limit
-const CHAIN = 'rinkeby'; // only rinkeby, polygon, or ethereum
+const CHAIN = 'polygon'; // only rinkeby, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Random Rabbits';
-const CONTRACT_SYMBOL = 'RR';
+const CONTRACT_NAME = 'TheRandomRabbits';
+const CONTRACT_SYMBOL = 'TRR';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x030D0C324260a7d90dd68c7daa6EAf5ffea10Bd0';
 const TREASURY_ADDRESS = '0x030D0C324260a7d90dd68c7daa6EAf5ffea10Bd0';
 const MAX_SUPPLY = 10000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 0.0001; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const MINT_PRICE = 400; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 222; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 const TEAM_RESERVE = 222;
 
