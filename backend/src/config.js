@@ -7,7 +7,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "TheRandomRabbits";
+const namePrefix = "Random Rabbits";
 const description = "We turn digital holders into real world investors. We buy cocoa and coffee plantations and guarantee the farmers a fixed, fair salary. 50% of the profits from the sale of the harvest go to the owners of The Random Rabbits and the farmers, the other 50% we invest in new plantations to increase the value of each Rabbit.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
@@ -48,8 +48,8 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'polygon'; // only rinkeby, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'TheRandomRabbits';
-const CONTRACT_SYMBOL = 'TRR';
+const CONTRACT_NAME = 'Random Rabbits';
+const CONTRACT_SYMBOL = 'RR';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x030D0C324260a7d90dd68c7daa6EAf5ffea10Bd0';
 const TREASURY_ADDRESS = '0x030D0C324260a7d90dd68c7daa6EAf5ffea10Bd0';
@@ -98,7 +98,7 @@ const solanaMetadata = {
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x030D0C324260a7d90dd68c7daa6EAf5ffea10Bd0",
       share: 100,
     },
   ],
