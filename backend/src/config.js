@@ -13,13 +13,13 @@ const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5000,
+    growEditionSizeTo: 100,
     layersOrder: [
       { name: "Background" },
       { name: "Fur" },
+      { name: "Headwear" },
       { name: "Ears" },
       { name: "Eyes" },
-      { name: "Headwear" },
       { name: "Clothing" },
       { name: "Mouth" },
     ],
